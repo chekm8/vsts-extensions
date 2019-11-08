@@ -18,12 +18,12 @@
             "OfficeFabric/*": ["node_modules/office-ui-fabric-react/lib/*"],
             "VSSUI/*": ["node_modules/vss-ui/*"],
             "Common/*": ["src/Common/*"],
-            "BugBashPro/*": ["src/Apps/BugBashPro/scripts/*"],
-            "Checklist/*": ["src/Apps/Checklist/scripts/*"],
+            //"BugBashPro/*": ["src/Apps/BugBashPro/scripts/*"],
+            //"Checklist/*": ["src/Apps/Checklist/scripts/*"],
             "ControlsLibrary/*": ["src/Apps/ControlsLibrary/scripts/*"],
-            "OneClick/*": ["src/Apps/OneClick/scripts/*"],
-            "PRWorkItems/*": ["src/Apps/PRWorkItems/scripts/*"],
-            "RelatedWits/*": ["src/Apps/RelatedWits/scripts/*"]
+            //"OneClick/*": ["src/Apps/OneClick/scripts/*"],
+            //"PRWorkItems/*": ["src/Apps/PRWorkItems/scripts/*"],
+            //"RelatedWits/*": ["src/Apps/RelatedWits/scripts/*"]
         },
         "types": ["react", "react-dom", "vss-web-extension-sdk"]
     },

@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\dist",
+    "\\dist\\ControlsLibrary",
+    "\\dist\\ControlsLibrary\\scripts",
+    "\\src\\Apps",
+    "\\src\\Apps\\ControlsLibrary",
+    "\\src\\Apps\\ControlsLibrary\\html",
+    "\\src\\Apps\\ControlsLibrary\\scripts"
+  ],
+  "SelectedNode": "\\dist\\ControlsLibrary\\scripts\\MultiValueControl.js",
+  "PreviewInSolutionExplorer": false
+}

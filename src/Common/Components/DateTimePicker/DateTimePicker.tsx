@@ -5,7 +5,7 @@ import * as React from "react";
 import { Calendar } from "OfficeFabric/Calendar";
 import { IDatePickerStrings } from "OfficeFabric/components/DatePicker/DatePicker.types";
 import { css } from "OfficeFabric/Utilities";
-import { Time } from "./Time";
+//import { Time } from "./Time";
 
 export interface IDateTimePickerProps {
     today: Date;
@@ -59,11 +59,8 @@ export class DateTimePicker extends React.Component<IDateTimePickerProps, IDateT
 
         return (
             <div className={css("date-time-picker", className)}>
-                <div className="date-time-picker-calendar">
-                    <Calendar onSelectDate={this._onSelectDate} isMonthPickerVisible={true} today={today} value={selectedDate} strings={DEFAULT_STRINGS} />
-                </div>
-                <div className="date-time-picker-time">
-                    <Time onSelectTime={this._onSelectTime} hour={selectedDate ? selectedDate.getHours() : 12} minute={selectedDate ? selectedDate.getMinutes() : 0} />
+                <div className="date-time-picker-calendar"> 
+                    <Calendar onSelectDate={this._onSelectDate} isMonthPickerVisible={false} autoNavigateOnSelection={true} today={today} value={selectedDate} strings={DEFAULT_STRINGS} />
                 </div>
             </div>
         );
@@ -86,19 +83,19 @@ export class DateTimePicker extends React.Component<IDateTimePickerProps, IDateT
         }
     };
 
-    private _onSelectTime = (hour: number, minute: number) => {
-        const { onSelectDate } = this.props;
-        const { selectedDate } = this.state;
+    //private _onSelectTime = (hour: number, minute: number) => {
+    //    const { onSelectDate } = this.props;
+    //    const { selectedDate } = this.state;
 
-        selectedDate.setHours(hour);
-        selectedDate.setMinutes(minute);
+    //    selectedDate.setHours(hour);
+    //    selectedDate.setMinutes(minute);
 
-        this.setState({
-            selectedDate
-        });
+    //    this.setState({
+    //        selectedDate
+    //    });
 
-        if (onSelectDate) {
-            onSelectDate(new Date(selectedDate.getTime()));
-        }
-    };
+    //    if (onSelectDate) {
+    //        onSelectDate(new Date(selectedDate.getTime()));
+    //    }
+    //};
 }

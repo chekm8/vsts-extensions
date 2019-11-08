@@ -48,7 +48,7 @@ export class DateTimeControl extends WorkItemFieldControl<Date, IWorkItemFieldCo
                         autoComplete="off"
                         readOnly={true}
                         className="date-time-picker-input"
-                        value={value ? format(value, "M/D/YYYY hh:mm A") : ""}
+                        value={value ? format(value, "M/D/YYYY") : ""}
                         onKeyDown={this._onInputKeyDown}
                         onFocus={this._onFocus}
                         onBlur={this._onBlur}
@@ -102,6 +102,7 @@ export class DateTimeControl extends WorkItemFieldControl<Date, IWorkItemFieldCo
 
     private _onBlur = () => {
         this.setState({ focussed: false });
+        this.setState({ expanded: false });
     };
 
     private _toggleCalendar = () => {
@@ -114,6 +115,7 @@ export class DateTimeControl extends WorkItemFieldControl<Date, IWorkItemFieldCo
 
     private _onSelectDate = (newDate: Date) => {
         this.onValueChanged(newDate);
+        this.setState({ expanded: false });
     };
 }
 
